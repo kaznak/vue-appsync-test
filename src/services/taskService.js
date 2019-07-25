@@ -1,4 +1,3 @@
-import uuidV4 from 'uuid/v4'
 import { API, graphqlOperation } from 'aws-amplify'
 
 export default {
@@ -17,20 +16,18 @@ export default {
     },
     async createTask(taskTitle) {
         const createTask = `
-    mutation createTask($id: ID!, $title: String!, $completed: Boolean!) {
+    mutation createTask($title: String!, $completed: Boolean!) {
       createTask(
         input: {
-          id: $id, title: $title, completed: $completed
+          title: $title, completed: $completed
         }
       ) {
-        id
         title
         completed
       }
     }
     `
         const taskDetails = {
-            id: uuidV4(),
             title: taskTitle,
             completed: false
         }

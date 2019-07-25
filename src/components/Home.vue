@@ -23,11 +23,11 @@
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn icon>
-              <v-icon v-if="task.completed" @click="toggleComplete(task)">check_box</v-icon>
-              <v-icon v-else @click="toggleComplete(task)">check_box_outline_blank</v-icon>
+              <v-icon v-if="task.completed" @click="toggleComplete(task)">mdi-check-box-outline</v-icon>
+              <v-icon v-else @click="toggleComplete(task)">mdi-checkbox-blank-outline</v-icon>
             </v-btn>
             <v-btn icon>
-              <v-icon @click="deleteTask(task)">clear</v-icon>
+              <v-icon @click="deleteTask(task)">mdi-close</v-icon>
             </v-btn>
           </v-card-actions>
         </v-card>
