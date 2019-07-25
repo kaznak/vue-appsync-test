@@ -4,15 +4,8 @@ import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify';
 import Amplify from 'aws-amplify'
-import appSyncConfig from './AppSyncAccess'
-
-const amplifyConfig = {
-    'aws_appsync_graphqlEndpoint': appSyncConfig.graphqlEndpoint,
-    'aws_appsync_region': appSyncConfig.region,
-    'aws_appsync_authenticationType': appSyncConfig.authenticationType,
-    'aws_appsync_apiKey': appSyncConfig.apiKey
-}
-Amplify.configure(amplifyConfig)
+import awsconfig from './AppSyncAccess'
+Amplify.configure(awsconfig)
 
 Vue.config.productionTip = false
 
